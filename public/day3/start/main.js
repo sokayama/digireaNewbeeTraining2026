@@ -33,7 +33,7 @@ const main = async () => {
 
     const positionAttributeLocation = gl.getAttribLocation(program, 'aPosition');
     const normalAttributeLocation = gl.getAttribLocation(program, 'aNormal');
-    // 【実装①】 UV座標用の Attribute Location を取得してください
+    // ★【実装】step 1: UV座標用の Attribute Location を取得してください
     const uvAttributeLocation = gl.getAttribLocation(program, 'aUV');
 
     const mvpUniformLocation = gl.getUniformLocation(program, 'uMVPMatrix');
@@ -101,7 +101,7 @@ const main = async () => {
     const positionSize = 3;
     const colorSize = 3;    // 今回シェーダーでは使いませんが配列には存在します
     const normalSize = 3;
-    // const uvSize = 2; // 【実装①】 で使用します
+    // const uvSize = 2; // ★【実装】step 1 : で使用します
 
     // ストライド: 11要素（3 + 3 + 3 + 2）× 4バイト = 44バイト
     const stride = (positionSize + colorSize + normalSize + 2) * floatSize;
@@ -115,14 +115,14 @@ const main = async () => {
     gl.vertexAttribPointer(normalAttributeLocation, normalSize, gl.FLOAT, false, stride, (positionSize + colorSize) * floatSize);
 
     // =====================================
-    // 【実装①】 ここに UV座標 (aUV) の Attribute有効化 と ポインタ設定 を記述してください
+    // ★【実装】step 1 : ここに UV座標 (aUV) の Attribute有効化 と ポインタ設定 を記述してください
     // =====================================
     // gl.enableVertexAttribArray(uvAttributeLocation);
     // gl.vertexAttribPointer(uvAttributeLocation, ...);
 
     gl.bindVertexArray(null);
 
-    // 【実装②】 ここで画像の非同期読み込みと、テクスチャの生成・転送を行ってください
+    // ★【実装】step 2 :  ここで画像の非同期読み込みと、テクスチャの生成・転送を行ってください
 
 
     const modelMatrix = mat4.create();

@@ -37,7 +37,7 @@ const main = async () => {
 
     const mvpUniformLocation = gl.getUniformLocation(program, 'uMVPMatrix');
     
-    // 【演習①・②】 uniformロケーションの取得（エラーにならないよう事前に取得しておきます）
+    // uniformロケーションの取得（エラーにならないよう事前に取得しておきます）
     const modelUniformLocation = gl.getUniformLocation(program, 'uModelMatrix');
     const lightUniformLocation = gl.getUniformLocation(program, 'uLightPosition');
 
@@ -143,9 +143,9 @@ const main = async () => {
 
         gl.uniformMatrix4fv(mvpUniformLocation, false, mvpMatrix);
 
-        // 【演習①】 modelMatrix と 固定のライト座標(uLightPosition) を転送してください
+        // ★【演習】step 1: modelMatrix と 固定のライト座標(uLightPosition) を転送してください
         
-        // 【演習②】 固定のライト座標をやめ、Math.sin, Math.cos でライト座標を円運動させて転送してください
+        // ★【演習】step 2: 固定のライト座標をやめ、Math.sin, Math.cos でライト座標を円運動させて転送してください
 
         gl.drawArrays(gl.TRIANGLES, 0, 36);
         requestAnimationFrame(render);

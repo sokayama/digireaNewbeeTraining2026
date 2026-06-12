@@ -110,7 +110,7 @@ const main = async () => {
         gl.useProgram(program);
         gl.bindVertexArray(vao);
 
-        // 【穴埋め演習 5】
+        // ★【穴埋め演習】Step 2.
         angle += 0.01;
 
         gl.drawArrays(gl.TRIANGLES, 0, 3);

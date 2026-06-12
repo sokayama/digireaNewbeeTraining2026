@@ -111,7 +111,7 @@ const main = async () => {
         gl.useProgram(program);
         gl.bindVertexArray(vao);
 
-        // 【穴埋め演習 5 ※Step 2で行うため、ここではまだ未実装（空欄）】
+        // ★【穴埋め演習】Step 2
         // angle += 0.01;
         // mat4.fromRotation...
         // mat4.multiply...
